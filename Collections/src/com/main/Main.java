@@ -1,10 +1,13 @@
 package com.main;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
+import com.learn.list.listUtilities;
 import com.learn.set.SetUtilities;
 
 public class Main {
@@ -13,19 +16,18 @@ public class Main {
 		
 		SetUtilities setUtil1 = new SetUtilities();
 			
-		testHashSet(setUtil1);
-		testLinkedHashSet(setUtil1);
-		testTreeSet(setUtil1);
-		
-		
+		//testHashSet(setUtil1);
+		//testLinkedHashSet(setUtil1);
+		//testTreeSet(setUtil1);	
+		testArrayList();
 	}
+	
 	
 	/**
 	 * 
 	 * @param setUtils
 	 */
-	public static void testLinkedHashSet(SetUtilities setUtils) {
-		
+	public static void testLinkedHashSet(SetUtilities setUtils) {	
 		Set<String> linkedHashSet = new LinkedHashSet<String>();
 		
 		linkedHashSet.add("one");
@@ -57,6 +59,7 @@ public class Main {
 		setUtil.printSet(test);
 	}
 	
+	
 	/**
 	 * This method creates a variable of type TreeSet.
 	 * Next it adds values to the variable.
@@ -73,6 +76,21 @@ public class Main {
 		treeSet.add("Ball");
 		
 		setUtil.printSet(treeSet);
+	}
+	
+	public static void testArrayList() {
+		
+		List<String> arrayList = new ArrayList<String>();
+		
+		arrayList.add("one");
+		arrayList.add("two");
+		arrayList.add("three");
+		arrayList.add("four");
+		arrayList.add("five");
+		
+		listUtilities listUtils = new listUtilities();
+		listUtils.printList(arrayList);
+		
 	}
 
 }
